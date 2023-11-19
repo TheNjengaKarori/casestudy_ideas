@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+/* Reset some default styles for better consistency */
+body, h1, p, ul, li {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Set a white background for the entire app */
+.app-container {
+  background-color: FAF7E1;
+  height: 100vh; /* Make sure the container takes up the full viewport height */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style the navigation bar */
+.navbar {
+  background-color: white; /* You can change this color to your preference */
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style the logo in the navigation bar */
+.logo-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.logo {
+  width: 50px; /* Adjust the size of the logo as needed */
+  height: auto;
+}
+
+/* Style the main content area */
+.main-content {
+  padding: 20px;
+  margin-top: 40px; 
+  text-align: center; /* Center the text horizontally */
+ font-family: 'Syne', sans-serif;
+  margin-bottom: 40px;
+}
+
+/* Style the H1 text */
+.main-heading {
+  margin-bottom: 20px; /* Increase the margin-bottom for even spacing */
+  font-family: 'Syne', sans-serif; /* Set the font family to 'Syne' and fallback to a generic sans-serif font */
+  font-size: 32px; /* Set the font size to 24px or adjust as needed */
+  max-width: 1100px; /* Set the maximum width to 600px or adjust as needed */
+  margin: 0 auto 20px; /* Center the heading horizontally and add space below */
+}
+
+/* Style the idea rectangle */
+.idea-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  width: 80%;
+  max-width: 1124px;
+  height: 35vh;
+  background-color: purple;
+  border-radius: 10px 10px 50px 10px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* Style the container for the idea and description */
+.idea-container .idea-and-desc {
+  text-align: left; /* Align the text to the left */
+  font-family: 'Roboto', sans-serif;
+  padding: 20px; /* Adjust the padding to control spacing inside the idea container */
+  margin: 0; /* Reset margin to ensure no additional spacing outside the idea container */
+}
+
+/* Style the text inside the idea and description container */
+.idea-container .idea-and-desc h2 {
   color: white;
+  font-size: 32px;
+  text-align: left;
+  margin-bottom: 10px; /* Add spacing below h2 element */
 }
 
-.App-link {
-  color: #61dafb;
+.idea-container .idea-and-desc p {
+  color: white; /* Set the text color to white */
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .idea-container {
+    width: 90%; /* Adjust the width for smaller screens */
+    height: 20vh; /* Adjust the height for smaller screens */
   }
 }
+
+/* Style the new challenge button */
+.new-challenge-button {
+  background-color: white; /* Set the background color to white */
+  color: black; /* Set the text color to black */
+  border: none; /* Remove the border */
+  border-radius: 10px; /* Set border radius to 10px */
+  padding: 10px 20px; /* Add padding for better appearance */
+  cursor: pointer; /* Add cursor pointer on hover */
+  font-family: 'syne', sans-serif; /* Set the font family to 'Roboto' and fallback to a generic sans-serif font */
+  font-size: 14px;
+  font-weight: 1000; /* Set font weight to semi-bold (you can adjust this value) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Add a bit more box shadow to the button */
+  position: relative; /* Set position to relative */
+  top: -45px; /* Move the button upwards into the idea container */
+  display: flex; /* Use flexbox to align items */
+  justify-content: space-between; /* Add space between text and icon */
+  align-items: center; /* Center items vertically */
+  margin: 0 auto; /* Center the button horizontally */
+  transition: box-shadow 0.3s ease; /* Add a smooth transition to the box shadow */
+}
+
+/* Style the Material icon inside the button */
+.new-challenge-button i.material-icons {
+  margin-left: 8px; /* Add margin to the left of the icon for spacing */
+}
+
+/* Add styles for the pressed-down effect */
+.new-challenge-button:active {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the box shadow on button press */
+}
+
