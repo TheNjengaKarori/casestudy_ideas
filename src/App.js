@@ -43,8 +43,8 @@ const App = () => {
       .catch(error => console.error('Error fetching ideas:', error));
   };
 
-  const rainbowColors = ['#FF4500', '#8B4513', '#483D8B', '#006400', '#A52A2A', '#8B0000', '#2F4F4F', '#8B008B', '#8B008B', '#483C32', '#1E90FF', "#8B0000",
-  "#191970","#2F4F4F","#556B2F","#008B8B","#483D8B","#8B008B","#8B4513","#B8860B","#8FBC8F","#9932CC","#B22222"];
+  const rainbowColors = ['#FF4500', '#8B4513', '#483D8B', '#006400', '#A52A2A', '#8B0000', '#2F4F4F', '#8B008B', '#8B008B', '#483C32', '#1E90FF', '#8B0000', '#191970', '#2F4F4F', '#556B2F', '#008B8B', '#483D8B', '#8B008B', '#8B4513', '#B8860B', '#8FBC8F', '#9932CC', '#B22222'
+];
 
   return (
     <div className="app-container">
