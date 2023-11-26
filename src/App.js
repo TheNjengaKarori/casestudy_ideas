@@ -39,7 +39,7 @@ const App = () => {
     <div className="app-container">
       <nav className="navbar">
         <div className="logo-container">
-          <img src="logo.png" alt="Logo" className="logo" />
+          <img src="Idealab.png" alt="Logo" className="logo" />
         </div>
       </nav>
       <div className="main-content">

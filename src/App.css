@@ -5,6 +5,11 @@ body, h1, p, ul, li {
   box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+.logo {
+  width: 125px !important; /* Adjust the width of the logo */
+  height: auto; /* Let the height adjust proportionally */
+}
+
 /* Set a white background for the entire app */
 .app-container {
   background-color: #FAF7E1;
@@ -14,7 +19,7 @@ body, h1, p, ul, li {
 
 /* Style the navigation bar */
 .navbar {
-  background-color: FAF7E1;
+  background-color: #FAF7E1;
   padding: 10px;
 }
 
@@ -51,15 +56,12 @@ body, h1, p, ul, li {
   width: 90%; /* Adjusted width for smaller screens */
   max-width: 1124px;
   height: 200px; /* Set a constant height */
-  background-color: purple;
-  border-radius: 10px;
+  border-radius: 10px 10px 50px 10px; 
   margin: 0 auto 20px;
   padding: 20px;
   margin-top: 50px;
 }
 
-/* Style the container for the idea and description */
-/* ... (Previous styles remain unchanged) */
 
 /* Style the container for the idea and description */
 .idea-container .idea-and-desc {
