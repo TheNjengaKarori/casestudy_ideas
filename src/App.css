@@ -46,7 +46,7 @@ body, h1, p, ul, li {
   padding: 20px;
   text-align: center;
   font-family: 'Syne', sans-serif;
-  margin-top: 20px; /* Adjusted margin-top for desktop view */
+  margin-top: 10px; /* Adjusted margin-top for desktop view */
 }
 
 /* Style the H1 text */
