@@ -23,7 +23,7 @@ const App = () => {
         setCurrentIdea(data.ideas[randomIndex]);
 
         // Set the next color in the predefined order
-        const rainbowColors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+        const rainbowColors = ['#FF4500', '#8B4513', '#483D8B', '#006400', '#A52A2A', '#8B0000', '#2F4F4F', '#8B008B', '#8B008B', '#483C32','#1E90FF'];
         const nextColorIndex = (ideaContainerColorIndex + 1) % rainbowColors.length;
         setIdeaContainerColorIndex(nextColorIndex);
       })

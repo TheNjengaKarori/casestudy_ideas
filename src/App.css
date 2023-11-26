@@ -2,17 +2,19 @@
 body, h1, p, ul, li {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 /* Set a white background for the entire app */
 .app-container {
-  background-color: FAF7E1;
-  height: 100vh; /* Make sure the container takes up the full viewport height */
+  background-color: #FAF7E1;
+  min-height: 100vh; /* Ensure at least full viewport height */
+  overflow-x: hidden; /* Hide horizontal scrollbar on smaller screens */
 }
 
 /* Style the navigation bar */
 .navbar {
-  background-color: white; /* You can change this color to your preference */
+  background-color: FAF7E1;
   padding: 10px;
 }
 
@@ -23,103 +25,107 @@ body, h1, p, ul, li {
 }
 
 .logo {
-  width: 50px; /* Adjust the size of the logo as needed */
+  width: 50px;
   height: auto;
 }
 
 /* Style the main content area */
 .main-content {
   padding: 20px;
-  margin-top: 40px; 
-  text-align: center; /* Center the text horizontally */
- font-family: 'Syne', sans-serif;
-  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'Syne', sans-serif;
 }
 
 /* Style the H1 text */
 .main-heading {
-  margin-bottom: 20px; /* Increase the margin-bottom for even spacing */
-  font-family: 'Syne', sans-serif; /* Set the font family to 'Syne' and fallback to a generic sans-serif font */
-  font-size: 32px; /* Set the font size to 24px or adjust as needed */
-  max-width: 1100px; /* Set the maximum width to 600px or adjust as needed */
-  margin: 0 auto 20px; /* Center the heading horizontally and add space below */
+  margin-bottom: 20px;
+  font-family: 'Syne', sans-serif;
+  font-size: 2em; /* Responsive font size using em units */
+  max-width: 1100px;
+  margin: 0 auto 20px;
 }
 
 /* Style the idea rectangle */
 .idea-container {
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  justify-content: center; /* Center children vertically */
-  width: 80%;
+  width: 90%; /* Adjusted width for smaller screens */
   max-width: 1124px;
-  height: 35vh;
+  height: 200px; /* Set a constant height */
   background-color: purple;
-  border-radius: 10px 10px 50px 10px;
+  border-radius: 10px;
   margin: 0 auto 20px;
   padding: 20px;
   margin-top: 50px;
 }
 
 /* Style the container for the idea and description */
+/* ... (Previous styles remain unchanged) */
+
+/* Style the container for the idea and description */
 .idea-container .idea-and-desc {
-  text-align: left; /* Align the text to the left */
-  font-family: 'Roboto', sans-serif;
-  padding: 20px; /* Adjust the padding to control spacing inside the idea container */
-  margin: 0; /* Reset margin to ensure no additional spacing outside the idea container */
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+  height: 100%; /* Ensure the container takes full height of the parent */
 }
 
 /* Style the text inside the idea and description container */
 .idea-container .idea-and-desc h2 {
   color: white;
-  font-size: 32px;
-  text-align: left;
-  margin-bottom: 10px; /* Add spacing below h2 element */
+  font-size: 1.75em;
+  text-align: center; /* Center the idea title */
 }
 
 .idea-container .idea-and-desc p {
-  color: white; /* Set the text color to white */
-  font-size: 20px;
+  color: white;
+  font-size: 1.25em;
   margin-bottom: 30px;
-  text-align: left;
+  text-align: center; /* Center the description */
 }
 
-/* Add a media query for smaller screens */
-@media (max-width: 768px) {
-  .idea-container {
-    width: 90%; /* Adjust the width for smaller screens */
-    height: 20vh; /* Adjust the height for smaller screens */
-  }
-}
 
 /* Style the new challenge button */
 .new-challenge-button {
-  background-color: white; /* Set the background color to white */
-  color: black; /* Set the text color to black */
-  border: none; /* Remove the border */
-  border-radius: 10px; /* Set border radius to 10px */
-  padding: 10px 20px; /* Add padding for better appearance */
-  cursor: pointer; /* Add cursor pointer on hover */
-  font-family: 'syne', sans-serif; /* Set the font family to 'Roboto' and fallback to a generic sans-serif font */
-  font-size: 14px;
-  font-weight: 1000; /* Set font weight to semi-bold (you can adjust this value) */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Add a bit more box shadow to the button */
-  position: relative; /* Set position to relative */
-  top: -45px; /* Move the button upwards into the idea container */
-  display: flex; /* Use flexbox to align items */
-  justify-content: space-between; /* Add space between text and icon */
-  align-items: center; /* Center items vertically */
-  margin: 0 auto; /* Center the button horizontally */
-  transition: box-shadow 0.3s ease; /* Add a smooth transition to the box shadow */
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Syne', sans-serif;
+  font-size: 1em;
+  font-weight: 700; /* Adjusted font weight for better visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  position: relative;
+  top: -45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  transition: box-shadow 0.3s ease;
 }
 
 /* Style the Material icon inside the button */
 .new-challenge-button i.material-icons {
-  margin-left: 8px; /* Add margin to the left of the icon for spacing */
+  margin-left: 8px;
 }
 
 /* Add styles for the pressed-down effect */
 .new-challenge-button:active {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adjust the box shadow on button press */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .idea-container {
+    width: 90%;
+    height: auto; /* Allow height to adjust based on content for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .new-challenge-button {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+  }
 }
 
