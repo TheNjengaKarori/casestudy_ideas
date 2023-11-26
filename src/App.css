@@ -23,6 +23,13 @@ body, h1, p, ul, li {
   padding: 10px;
 }
 
+.productHuntLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* Style the logo in the navigation bar */
 .logo-container {
   display: flex;

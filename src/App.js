@@ -35,7 +35,7 @@ const App = () => {
   };
 
   const getIdeaContainerColor = () => {
-    const rainbowColors = ['#FF4500', '#8B4513', '#483D8B', '#006400', '#A52A2A', '#8B0000', '#2F4F4F', '#8B008B', '#8B008B', '#483C32','#1E90FF',];
+    const rainbowColors = ['#FF4500', '#8B4513', '#483D8B', '#006400', '#A52A2A', '#8B0000', '#2F4F4F', '#8B008B', '#8B008B', '#483C32','#1E90FF'];
     return rainbowColors[ideaContainerColorIndex];
   };
 
@@ -45,10 +45,12 @@ const App = () => {
         <div className="logo-container">
           <img src="Idealab.png" alt="Logo" className="logo" />
         </div>
+        {/* Product Hunt link */}
+        <div className="productHuntLink" dangerouslySetInnerHTML={{ __html: '<a href="https://www.producthunt.com/posts/uxideas?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-uxideas" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=427083&theme=dark" alt="UXIdeas - &#0034;Inspire&#0032;Your&#0032;Designs&#0032;Limitless&#0032;UI&#0047;UX&#0032;Ideas&#0033;&#0034; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>' }} />
       </nav>
       <div className="main-content">
         <h1 className="main-heading">
-          Take the scenic route to UI/UX design greatness with 100+ ideas for your case studies and personal projects.
+          Take the scenic route to UI/UX design greatness with 1000+ ideas for your case studies and personal projects.
         </h1>
         <div className="idea-container" style={{ backgroundColor: getIdeaContainerColor() }}>
           {currentIdea && (
