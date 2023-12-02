@@ -65,7 +65,7 @@ body, h1, p, ul, li {
   height: 200px; /* Set a constant height */
   border-radius: 10px 10px 50px 10px; 
   margin: 0 auto 20px;
-  padding: 20px;
+  padding: 10px;
   margin-top: 60px;
 }
 
@@ -74,6 +74,7 @@ body, h1, p, ul, li {
 .idea-container .idea-and-desc {
   text-align: center; /* Center text horizontally */
   display: flex;
+
   flex-direction: column;
   justify-content: center; /* Center text vertically */
   height: 100%; /* Ensure the container takes full height of the parent */
@@ -92,7 +93,7 @@ body, h1, p, ul, li {
   font-size: 1.25em;
   font-family: 'poppins', sans-serif;
   margin-bottom: 30px;
-  padding: 0 100px;
+  padding: 0 18px;
   text-align: center; /* Center the description */
 }
 
@@ -150,12 +151,15 @@ body, h1, p, ul, li {
   /* Adjust styles for smaller screens */
   .idea-container {
     width: 90%;
-    height: auto; /* Allow height to adjust based on content for smaller screens */
-    padding: 10px; /* Adjust padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content for smaller screens */ /* Adjust padding for smaller screens */
   }
 
   .new-challenge-button {
     font-size: 0.85em; /* Adjusted font size for smaller screens */
+  }
+
+  .idea-container .idea-and-desc p {
+    font-size: 18px; /* Reduce the font size of the idea title for smaller screens */
   }
 }
 
