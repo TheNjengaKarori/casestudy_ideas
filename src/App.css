@@ -130,7 +130,22 @@ body, h1, p, ul, li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Add a media query for smaller screens */
+.social-media-links {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media-links button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
 @media (max-width: 768px) {
   /* Style the main heading for smaller screens */
@@ -150,8 +165,13 @@ body, h1, p, ul, li {
 
 @media (max-width: 768px) {
   /* Adjust styles for smaller screens */
+  .main-content {
+    padding: 10px;
+  }
+
+  
   .idea-container {
-    width: 90%;
+    width: 80%;
     height: auto; /* Allow height to adjust based on content for smaller screens */ /* Adjust padding for smaller screens */
   }
 
@@ -160,7 +180,23 @@ body, h1, p, ul, li {
   }
 
   .idea-container .idea-and-desc p {
-    font-size: 18px; /* Reduce the font size of the idea title for smaller screens */
+    font-size: 16px; /* Reduce the font size of the idea title for smaller screens */
   }
-}
 
+  .main-heading {
+    width: 80%;
+    font-size: 1.2em; /* Reduce the font size of the main heading for smaller screens */
+  }
+
+  .social-media-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-media-links button {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+}

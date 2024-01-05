@@ -39,6 +39,36 @@ const App = () => {
     return rainbowColors[ideaContainerColorIndex];
   };
 
+  const shareOnSocialMedia = (platform) => {
+    const shareText = `Check out this awesome UX/UI design inspiration at UXIdeas at`;
+    let shareUrl;
+  
+    switch (platform) {
+      case 'facebook':
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=https://uxideas.vercel.app/&quote=${encodeURIComponent(shareText)}`;
+        break;
+      case 'twitter':
+        shareUrl = `https://twitter.com/intent/tweet?url=https://uxideas.vercel.app/&text=${encodeURIComponent(shareText)}`;
+        break;
+      case 'whatsapp':
+        shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
+        break;
+      case 'linkedin':
+        shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=https://uxideas.vercel.app/&title=${encodeURIComponent(shareText)}`;
+        break;
+      case 'email':
+        window.location.href = `mailto:?subject=Check%20out%20this%20awesome%20UX%2FUI%20design%20inspiration&body=${encodeURIComponent(shareText)}`;
+        break;
+      default:
+        break;
+    }
+  
+    if (shareUrl) {
+      window.open(shareUrl, '_blank');
+    }
+  };
+  
+
   return (
     <div className="app-container">
       <nav className="navbar">
@@ -64,6 +94,25 @@ const App = () => {
           <span style={{ paddingRight: '8px' }}>New Challenge</span>
           <i className="material-icons" style={{ paddingLeft: '8px' }}>cached</i>
         </button>
+
+         {/* Social Media Links */}
+         <div className="social-media-links">
+          <button onClick={() => shareOnSocialMedia('facebook')}>
+            <i className="fab fa-facebook x2"></i>
+          </button>
+          <button onClick={() => shareOnSocialMedia('twitter')}>
+            <i className="fab fa-twitter"></i>
+          </button>
+          <button onClick={() => shareOnSocialMedia('whatsapp')}>
+            <i className="fab fa-whatsapp"></i>
+          </button>
+          <button onClick={() => shareOnSocialMedia('linkedin')}>
+            <i className="fab fa-linkedin"></i>
+          </button>
+          <button onClick={() => shareOnSocialMedia('email')}>
+            <i className="fas fa-envelope"></i>
+          </button>
+        </div>
       </div>
     </div>
   );
