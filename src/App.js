@@ -40,7 +40,7 @@ const App = () => {
   };
 
   const shareOnSocialMedia = (platform) => {
-    const shareText = `Check out this awesome UX/UI design inspiration at UXIdeas at`;
+    const shareText = `Check out this awesome website for UX/UI design inspiration at `;
     let shareUrl;
   
     switch (platform) {

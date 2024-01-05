@@ -190,13 +190,14 @@ body, h1, p, ul, li {
 
   .social-media-links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-top: 220px;
+    margin-right: 200px;
+    flex-direction: row; /* Change to column for vertical layout */
+    align-items: center; /* Center links horizontally */
   }
 
   .social-media-links button {
-    margin-bottom: 5px;
-    font-size: 18px;
+    margin-bottom: 10px; /* Add margin between social media links */
   }
 
 }
