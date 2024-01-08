@@ -152,11 +152,11 @@ body, h1, p, ul, li {
   /* Adjust styles for smaller screens */
 
   .main-heading {
-    font-size: 1.5em; /* Adjusted font size for smaller screens */
+    font-size: 1.8em; /* Adjusted font size for smaller screens */
   }
 
   .idea-container .idea-and-desc h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
   }
   
   .idea-container .idea-and-desc p {
@@ -183,7 +183,7 @@ body, h1, p, ul, li {
 
   .main-heading {
     width: 80%;
-    font-size: 1.2em; /* Reduce the font size of the main heading for smaller screens */
+    font-size: 1.5em; /* Reduce the font size of the main heading for smaller screens */
   }
 
   .social-media-links {
