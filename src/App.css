@@ -147,8 +147,10 @@ body, h1, p, ul, li {
   font-size: 20px;
 }
 
+
 @media (max-width: 768px) {
-  /* Style the main heading for smaller screens */
+  /* Adjust styles for smaller screens */
+
   .main-heading {
     font-size: 1.5em; /* Adjusted font size for smaller screens */
   }
@@ -160,11 +162,7 @@ body, h1, p, ul, li {
   .idea-container .idea-and-desc p {
     font-size: 1.10em;
   }
-  
-}
 
-@media (max-width: 768px) {
-  /* Adjust styles for smaller screens */
   .main-content {
     padding: 10px;
   }
@@ -194,6 +192,7 @@ body, h1, p, ul, li {
     margin-right: 200px;
     flex-direction: row; /* Change to column for vertical layout */
     align-items: center; /* Center links horizontally */
+    display: none;
   }
 
   .social-media-links button {
